@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rice Mill Data Management</h1>
+        <div class="tab-container">
+            <button class="tab-button" id="dataEntryTab">Data Entry</button>
+            <button class="tab-button" id="dataViewerTab">Data Viewer</button>
+        </div>
+
+        <!-- Data Entry Section -->
+        <div id="dataEntry" class="section">
+            <form id="dataForm">
+                <label for="village">Village</label>
+                <select id="village" required>
+                    <!-- Default options for villages -->
+                    <option value="buggaram">Buggaram</option>
+                    <option value="sirikonda">Sirikonda</option>
+                    <option value="jagtial">Jagtial</option>
+                    <option value="other">Other (Add New)</option>
+                </select>
+                <div id="newVillageContainer" style="display:none;">
+                    <label for="newVillage">New Village Name</label>
+                    <input type="text" id="newVillage">
+                </div>
+                
+                <label for="vehicleNumber">Vehicle Number</label>
+                <input type="text" id="vehicleNumber" required>
+
+                <label for="loadedWeight">Loaded Weight (kg)</label>
+                <input type="number" id="loadedWeight" required>
+
+                <label for="emptyWeight">Empty Weight (kg)</label>
+                <input type="number" id="emptyWeight" required>
+
+                <label for="bagWeight">Bag Weight (kg)</label>
+                <input type="number" id="bagWeight" placeholder="e.g., 42" required>
+
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+
+        <!-- Data Viewer Section -->
+        <div id="dataViewer" class="section"></div>
+    </div>
+
+    <script src="datastore.js"></script>
+</body>
+</html>

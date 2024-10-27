@@ -1,0 +1,132 @@
+/* Full-page background and centering for login */
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #f0f4f8;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Center the login container */
+.container {
+    width: 90%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* Main container for data entry/viewing */
+.main-container {
+    width: 95%; /* Increased width */
+    max-width: 1000px; /* Increased max-width for larger displays */
+    background-color: #fff;
+    padding: 40px; /* Increased padding for more space inside */
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    overflow: auto; /* Manage overflow */
+    max-height: 80vh; /* Limit height for long entries but allow scrolling */
+}
+
+/* Header Styling */
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Input fields styling */
+form input, form select {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    font-size: 16px;
+    color: #495057;
+    box-sizing: border-box;
+}
+
+/* Submit button */
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #2980b9;
+}
+
+/* Tab buttons */
+.tab-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-container button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tab-container button:hover,
+.tab-container button.active-tab {
+    background-color: #2980b9;
+}
+
+/* Table styling in Data Viewer */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #e9ecef;
+    text-align: center;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+/* Verification button in table */
+.verify-button {
+    padding: 8px 12px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.verify-button:hover {
+    background-color: #218c54;
+}

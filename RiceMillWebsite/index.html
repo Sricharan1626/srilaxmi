@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Rice Mill Data Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rice Mill Login</h1>
+        
+        <form id="loginForm" class="form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter password" required>
+
+            <button type="submit" class="submit-button">Login</button>
+        </form>
+
+        <p id="errorMessage" style="color: red; display: none;">Incorrect username or password. Please try again.</p>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Validate credentials
+            if ((username === "srilaxmi.vasu" && password === "9989143166") || 
+                (username === "srilaxmi.krishan" && password === "9100949909")) {
+                // Successful login; redirect to data page
+                window.location.href = "data-page.html";
+            } else {
+                // Show error message
+                document.getElementById("errorMessage").style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>
